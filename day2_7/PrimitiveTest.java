@@ -23,7 +23,7 @@ public class PrimitiveTest{
 		long l = 1000L;	//<==long의 경우 000l 또는 000L로 int와 구별
 		
 		//실수형
-		float f = 1000.5F	//<==float의 경우 000F 또는 000f로 double과 구별
+		float f = 1000.5F;	//<==float의 경우 000F 또는 000f로 double과 구별
 		double d = 1000.5;
 
 		//print()와 println()의 차이점  <== 실행결과를 확인할
