@@ -28,7 +28,7 @@ public class PrimitiveTest{
 
 		//print()와 println()의 차이점  <== 실행결과를 확인할
 		System.out.print("자바의 Primitive Data type을 ++");
-		System.out,println(":: 사용하여 포준출력 장치로 ,,,"+"::출력");
+		System.out.println(":: 사용하여 포준출력 장치로 ,,,"+"::출력");
 
 		//+연산자의 의미 (문자와 + 연산자가 사용되면 append)
 		System.out.println("논리형: "+boo);
