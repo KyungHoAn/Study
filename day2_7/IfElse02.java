@@ -10,7 +10,7 @@ package jb01.part07;
 */
 public class IfElse02{
 	//main method
-	public static void main(String args){
+	public static void main(String[] args){
 		int x =1;
 		int y =2;
 		
