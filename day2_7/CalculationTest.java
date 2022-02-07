@@ -24,7 +24,7 @@ public class CalculationTest {
 
 		//연산후 대입연산자(+=)사용 (c=c+10 동일한 의미)
 		c+=10;
-		System.out.println("c+=10="+c);
+		System.out.println("c+=10+"+c);
 
 		//논리반전연산자
 		boolean boo1 = true;
