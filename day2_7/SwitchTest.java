@@ -28,7 +28,7 @@ public class Switchtest {
 			case 5:
 				System.out.println("입력하신 값을 5입니다.");
 				berak;
-			defalut:
+			default:
 				System.out.println("case문은 다통과(동일상수가 없을 경우");
 				System.out.println("defalut가 수행됨... 입력하신 수는"+inputData+"입니다.");
 				berak;
