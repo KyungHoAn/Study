@@ -8,7 +8,7 @@ public class Prob01 {
 		///
 		int num = Integer.parseInt(args[0]);
 		//Scanner stdIn = new Scanner(System.in);
-		System.out.println("¼ýÀÚ ÀÔ·Â: ");
+		System.out.println("숫자 입력: ");
 		//int num = stdIn.nextInt();
 
 		char star = '*';
