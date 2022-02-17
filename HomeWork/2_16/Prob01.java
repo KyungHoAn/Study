@@ -8,7 +8,7 @@ public class Prob01 {
 		///
 		int num = Integer.parseInt(args[0]);
 		//Scanner stdIn = new Scanner(System.in);
-		System.out.println("¼ýÀÚ ÀÔ·Â: ");
+		System.out.println("Â¼Ã½Ã€Ãš Ã€Ã”Â·Ã‚: ");
 		//int num = stdIn.nextInt();
 
 		char star = '*';
@@ -18,7 +18,7 @@ public class Prob01 {
 			for(int j=0; j<i; j++) {
 				System.out.print(star);
 			}			
-			System.out.println(); //ÁÙ¹Ù²Þ
+			System.out.println(); //
 			
 			for(int a=num; a>=num; a--) {
 				System.out.print(s);
