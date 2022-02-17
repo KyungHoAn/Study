@@ -1,1 +1,1 @@
-# BitStudy
+# Study
