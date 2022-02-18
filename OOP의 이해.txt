@@ -34,7 +34,131 @@ dependency(의존관계)
 의존관계는 어떠한 객체가 다른 객체를 호출할 때 이루어지는 것으로 실생활의 예로는 TV와 리모컨의 관계로 나타난다.
 
 Polymorphism(다형성)
-각 요소들이 여러 가지 자료형으로 표현될 수 있다는 것을 말한다. 기본자료형(byte, short, int, long, double, float, char, boolean) 참조 자료형(String, Integer...) 
+하나를 할 수 있으면 여러가지를 할 수 있다는 것. => OverLoading
 
 Encapuslation(캡슐화) / 절차은익 / 정보은익
-캡슐화는 외부의 접근을 막는 것으로 외부에 노출할 필요가 없는 정보들을 은닉하는 것이다. 즉 캡슐화의 목적은 코드를 재수정 없이 재활용하는 것과 (public, private, protected)접근제어자를 통한 정보 은익이다.
+=> 연관된 목적을 가지는 변수와 함수를 하나의 클래스로 묶어 외부에서 접근 못하도록 은닉
+캡슐화는 외부의 접근을 막는 것으로 외부에 노출할 필요가 없는 정보들을 은닉하는 것이다. 즉 캡슐화의 목적은 코드를 재수정 없이 재활용하는 것과 (public, private, protected, defalut)접근제어자를 통한 정보 은익이다.
+
+CSV = 띄어스기, 콤마, 등
+
+UML = Unified Modeling Language
+
+GUI = 그래픽 사용자 인터페이스 Graphical user Interface
+
+CLI = 커맨드 라인 인터페이스 Command Line Interface
+
+API = Application Programming Interface
+
+Camel Case = 낙타 표기법
+
+Snake Case  = 뱀 표기법
+
+APP = Application software (자바에서는 실행 환경)
+
+Bean = Rear World를 표현
+
+식별자(Identifier) : 프로그래머가 직접 만들어야하는 이름
+
+예약어(Keyword) : 프로그래밍 언어에 미리 정의된 의미있는 단어
+
+리펙토링 -> 다시 코드 확인하는 작업(이미 작성한 소프트웨어에서 코드의 가독성과 유지보수성을 높이기 위해 내부구조를 변경하는 것)
+
+Call By Calue : 값에 의한 호출
+
+Call By referance : 참조에 의한 호출
+
+Major Upgrade : 제품이 기존 버전보다 많은 기능 향상 및 사용자 편의가 대폰 개선된 경우
+
+Minor Upgrade : 제품의 기존버전의 사용상 발생했던 문제점 및 사용자 편의가 소폭 개선된 경우
+
+new : 메모리 할당(refernce에 사용)
+
+. : ~씨 (다트)
+
+환경변수 classpath .;	JAVA_HOME	jdk~
+			PATH	%JAVAHOME%\bin
+
+분산환경 : 다른 컴퓨터에 있는 원격 객체들을 호출할 수 있는 RMI(Remote Method Invocation)기능 제공
+
+Method Overloading: 한 클래스 내에, 여러개의 같은 이름의 메소드를 정의하는 것
+
+Mehtod OverRiding : sub클래스(자식)가 부모클래스에서 선언된 것과 같은 메소드를 가질 수 있는 것
+
+Abstract Mehtod(추상 메소드) : 자식클래스에서 반드시 오버라이딩해야만 사용할 수 있는 메소드
+
+Field = 상태와 속성을 표현
+
+Method = 행위
+
+Data = 자료 /  DataBase = 여러 사람이 공유하여 사용할 목적으로 통합, 관리하는 데이터 집합
+
+실습도메인 = 도메인(IP주소에 붙는 이름)
+
+인스턴스 = 객체지향에서 해당 클래스의 구조로 컴퓨터 저장공간에서 할당된 실페를 의미
+
+* 인스턴스 생성 A a = new A();  / A b = new A();
+
+abstract class: 하나 이상의 추상메서드를 포함하는 클래스
+
+interface = 추상클래스
+
+Abstract class(추상 클래스) : 하나 이상의 추상메서드를 포함하는 클래스
+
+Abstract mehtod(추상 메서드) : 자식클래스에서 반드시 오버라이딩해야만 사용할 수 있는 메서드
+
+attribute =속성값(Field)  =인스턴스 변수 = 멤버변수
+
+behabior(행동) = Method = message 전달 수단 = 인스턴스 메서드
+
+getter = 객체 외부에서 객체 Field값을 사용하기 부적절한 경우가 있다. 이러한 경우 메소드드를 필드값을 가공 후, 외부로 전달
+
+setter = 데이터는 외부에서 접근하지 못하도록 막고 메소드는 공개해서, 외부에서 메소드를 통해 데이터에 접근하는 것을 유도
+
+J2SE 왜 설치하는가 = 개발환경와 실행환경을 구축하기 위해서
+
+argument = 인자
+=> 메소드, 생성자를 호출할 때 데이터를 매개변수에 값을 전달해준다.
+
+parameter = 매개변수
+=> 매개변수는 메소드, 생성자를 선언할 때, 어떤 형태로 데이터 값이 들어올지 정해준다.
+
+생성자 = new 연산자를 통해 인스턴스를 생성하 ㄹ때 반드시 호출이 되녹 제일먼저 실행되는 일종의 메서드 / 클래스 이름을 붙여 인자값을 넣는다
+
+객체모델링 : 현실세계의 객체를 소프트웨어 객체로 설계하는 것
+
+super() : 상위 생성자를 호출 (모든 생성자의 첫 라인에는 super();가 생략되어 있음
+	부모클래스로부터 상속받은 필드나 메소드를 자식클래스에서 참조하는데 사용하는 참조변수
+
+this() : 자신을 가리킨다. -> 생략되어 있으며 생략하 ㄹ수 있다.
+
+*상속 이후에 출현하는 것
+OverRiding :  차신의 클래스에 없는 부모클래스를 공유하는 것
+
+폴더 -> 디렉토리 -> pakage(폴더 묶음)
+
+extends : 상속 => 붐의 특징을 연장해서 사용한다.
+
+객체 / 인스턴스 : 객체는 소프트웨어 세계에 구현할 대상, 인스턴스는 설계도를 바탕으로 소프트ㅜ에어 세계에 구현된 구체적인 실체
+
+클래스메서드 : 앞에 static 이 붙어있으면 클래스 메서드
+
+인스턴스메서드 : 반드시 객체를 생성해야만 호출 가능
+
+인스턴스 변수 = 전역변수(Field) = 멤버변수
+
+지역변수 = 로컬변수
+
+Acess Modifier 
+- public :누구나 접근가능
+- protexted : 상속관계, 같은 package 접근 가능
+- default : 같은 package 접근 가능
+- private : 자신만 접근 가느
+
+Modifier
+- static : 맨위에서부터 훌어 내려오면서 static block먼저 실행
+	static 메서드는 class 변수만 접근 가능
+	(static 메모리상에 올려놓음으로 모두가 사용가능한 공유 상태로 만듬)
+
+- final : 마지막이라는 선언으로 수정 불가능한 상태를 만든다. (값 변경 불가)
+- abstract
