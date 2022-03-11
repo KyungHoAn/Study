@@ -1,0 +1,44 @@
+//==============================================//
+//==================== 실   습  ====================//
+//==============================================//
+
+1. 부서명 / 부서salary 평균 / 합 /인원수 조회 (부서명 null / 대기발령  제외)
+
+
+SELECT
+DEPT_NAME 부서명,
+AVG(SALARY) 평균급여,
+SUM(SALARY) 총급여,
+COUNT(*) 인원수
+FROM EMP_TEST
+WHERE DEPT_NAME IS NOT NULL AND DEPT_NAME NOT IN('대기발령')
+GROUP BY DEPT_NAME;
+
+
+
+2. 부서명 / 부서salary 평균 / 합 /인원수 조회 (부서명 null / 대기발령  제외)
+    ==> 인원수가 5이상만 출력
+SELECT
+DEPT_NAME 부서명,
+AVG(SALARY),
+SUM(SALARY),
+COUNT(*)
+FROM EMP_TEST
+WHERE DEPT_NAME IS NOT NULL AND DEPT_NAME NOT IN('대기발령')
+HAVING COUNT(*) >=5
+GROUP BY DEPT_NAME;
+
+HAVING COUNT(*) >=5 AND AVG(SALARY)>=5000;
+
+3. 부서명 / 부서salary 평균 / 합 /인원수 조회 (부서명 null / 대기발령  제외)
+     ==> 인원수가 5이상만 출력
+     ==>  평균급여가 5000이상
+SELECT
+DEPT_NAME 부서명,
+AVG(SALARY),
+SUM(SALARY),
+COUNT(*)
+FROM EMP_TEST
+WHERE DEPT_NAME IS NOT NULL AND DEPT_NAME NOT IN('대기발령')
+GROUP BY DEPT_NAME;
+HAVING COUNT(*)>=5 AND AVG(SALARY)>=5000

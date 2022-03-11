@@ -1,0 +1,144 @@
+///////////////////////////////1번
+SELECT
+E.EMPLOYEE_ID 사원아이디, D.DEPARTMENT_ID 부서아이디, E.SALARY 연봉, AVG(SALARY) 부서평균연봉
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID  AND E.SALARY>(SELECT
+AVG(SALARY)
+FROM DEPARTMENTS D, EMPLOYEES E 
+WHERE D.DEPARTMENT_ID = E.DEPARTMENT_ID)
+GROUP BY E.EMPLOYEE_ID, D.DEPARTMENT_ID, E.SALARY;
+
+SELECT
+AVG(SALARY)
+FROM DEPARTMENTS D, EMPLOYEES E 
+WHERE D.DEPARTMENT_ID = E.DEPARTMENT_ID;
+
+
+select
+e.employee_id 사번, e.department_id 부서번호, e.salary 연봉, vt.avgsal 부서평균연봉 
+from employees e,
+(select
+department_id, round(avg(salary),0) avgsal
+from employees
+group by department_id) vt
+where (e.department_id = vt.department_id) and (e.salary > vt.avgsal)
+order by 부서평균연봉 DESC;
+
+
+SELECT
+E.EMPLOYEE_ID, E.DEPARTMENT_ID, E.SALARY, VT.AVGS
+FROM EMPLOYEES E, (SELECT
+					DEPARTMENT_ID, ROUND(AVG(SALARY),0) AVGS
+					FROM EMPLOYEES
+					GROUP BY DEPARTMENT_ID) VT
+WHERE E.DEPARTMENT_ID = VT.DEPARTMENT_ID 
+AND (E.SALARY > VT.AVGS)
+ORDER BY VT.AVGS DESC;
+================================================
+SELECT
+E.EMPLOYEE_ID, E.DEPARTMENT_ID,E.SALARY, VT.AVGS
+FROM EMPLOYEES E, (SELECT
+					ROUND(AVG(E.SALARY),0) AVGS
+					FROM EMPLOYEES E, DEPARTMENTS D
+					WHERE E.DEPARTMENT_ID=D.DEPARTMENT_ID
+					GROUP BY D.DEPARTMENT_NAME) VT
+WHERE E.SALARY>VT.AVGS
+GROUP BY E.EMPLOYEE_ID, E.DEPARTMENT_ID,E.SALARY
+ORDER BY E.EMPLOYEE_ID ASC;
+
+///////////////////////2번
+
+SELECT
+RANK() OVER(PARTITION BY ORDER BY SALARY DESC) RANKING,
+E.LAST_NAME, E.FIRST_NAME, E.SALARY
+FROM EMPLOYEES E
+GROUP BY E.LAST_NAME, E.FIRST_NAME, E.SALARY
+ORDER BY SALARY DESC;
+
+select
+vt.Ranking, e.LAST_NAME, e.FIRST_NAME, e.SALARY
+from employees e,(select
+                RANK() OVER (order by salary desc) RANKING, salary
+                from employees) vt
+where vt.Ranking Between 6 and 10
+      and e.salary = vt.salary
+group by e.last_name, e.first_name,e.salary,vt.Ranking
+order by vt.ranking;
+
+//내가한거
+SELECT
+VT.RANKING, E.LAST_NAME, E.FIRST_NAME, E.SALARY
+FROM EMPLOYEES E, (SELECT
+RANK() OVER(ORDER BY SALARY DESC) RANKING, LAST_NAME
+FROM EMPLOYEES) VT
+WHERE E.LAST_NAME = VT.LAST_NAME AND VT.RANKING BETWEEN 6 AND 10
+GROUP BY VT.RANKING, E.LAST_NAME, E.FIRST_NAME, E.SALARY
+ORDER BY E.SALARY DESC;
+//
+
+
+
+///////////////////////3번
+SELECT
+to_char(e.hire_date,'yyyy') 년, TO_CHAR(AVG(SALARY),'999,999') 평균급여
+FROM EMPLOYEES E, JOBS J
+WHERE E.JOB_ID = J.JOB_ID AND JOB_TITLE = 'Sales Manager'
+GROUP BY to_char(e.hire_date,'yyyy')
+ORDER BY to_char(e.hire_date,'yyyy') ASC;
+
+
+
+SELECT
+TO_CHAR(HIRE_DATE,'YYYY') 년도
+FROM EMPLOYEES
+
+
+to_char(e.hire_date,'yyyy') 년도,
+
+
+
+///////////////////////
+SELECT
+vt.년도 년도, avg(e.salary) 평균급여
+from employees e, (select 
+to_char(e.hire_date,'yyyy') 년도
+from employees e, jobs j
+where e.job_id = j.job_id and j.job_title IN 'Sales Manager'
+group by hire_date) vt , jobs j	
+where e.job_id = j.job_id and j.job_title IN 'Sales Manager'
+group by 년도;
+///////////////////////
+
+
+///////////////////////4번
+SELECT
+E.LAST_NAME, E.MANAGER_ID, D.DEPARTMENT_NAME
+FROM EMPLOYEES E, DEPARTMENTS D, LOCATIONS L
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID AND D.LOCATION_ID = L.LOCATION_ID AND L.CITY =(SELECT
+CITY
+FROM LOCATIONS
+WHERE CITY in 'Seattle')
+ORDER BY E.LAST_NAME;
+
+
+SELECT
+CITY
+FROM LOCATIONS
+WHERE CITY in 'Seattle';
+
+SELECT
+E1.LAST_NAME
+FROM EMPLOYEES E1, EMPLOYEES E2
+WHERE E1.EMPLOYEE_ID = E2.MANAGER_ID
+GROUP BY E1.LAST_NAME
+
+///////////////////////
+
+SELECT
+E.LAST_NAME, D.MANAGER_ID, D.DEPARTMENT_NAME
+FROM EMPLOYEES E, DEPARTMENTS D, LOCATIONS L
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID AND D.LOCATION_ID = L.LOCATION_ID AND L.CITY = (SELECT
+CITY
+FROM LOCATIONS
+WHERE CITY in 'Seattle')
+ORDER BY E.LAST_NAME;

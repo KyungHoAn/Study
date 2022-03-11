@@ -1,0 +1,88 @@
+//========================================================//
+//==> JOIN : 하나 이상의 테이블로 부터 연관된 Data 조회
+	  4가지 경우 : EQUI JOIN / NON-EQUI JOIN / SELF JOIN / OUTER JOIN
+
+
+
+//========================================================//
+//==> 1. NON-EQUIJOIN 
+	=> EQUI JOIN 은 = 연산자를 사용
+	=> NON-EQUI JOIN 은 =연산자를 제외한 비교 연산자 사용
+
+
+//==> sal_grade TABLE 생성
+CREATE TABLE sal_grade(
+	grade CHAR(1) CONSTRAINT salgrade_grade_nn NOT NULL,
+	losal	 NUMBER(4) CONSTRAINT salgrade_losal_uq UNIQUE,
+	hisal	 NUMBER(4) CONSTRAINT salgrade_hisal_uq UNIQUE
+);
+
+
+//==> RECORD 입력
+
+INSERT INTO sal_grade VALUES('A',4000,5999);
+INSERT INTO sal_grade VALUES('B',3000,3999);
+INSERT INTO sal_grade VALUES('C',2000,2999);
+INSERT INTO sal_grade VALUES('D',1000,1999);
+INSERT INTO sal_grade VALUES('E',500,999);
+
+COMMIT;
+
+SELECT * FROM sal_grade;
+
+
+
+//==============================================//
+//================== 실   습 1  ====================//
+//==============================================//
+
+1. 개발부 직원과 영업부직원 이름 , 월급 , 월급등급 , 부서명 조회
+    => 등급 높은순  ( NON-EQUI JOIN /  EQUI JOIN 같이 사용)
+
+SELECT
+C.NAME 이름, C.SALARY 월급, SG.GRADE 월급등급, S.DEPT_NAME 부서명
+FROM C_EMP C, S_DEPT S, SAL_GRADE SG
+where C.DEPT_ID = S.ID AND C.SALARY BETWEEN SG.LOSAL AND SG.HISAL AND S.DEPT_NAME IN('개발부','영업부')
+ORDER BY SG.GRADE ASC;
+
+
+SELECT
+S.DEPT_NAME 이름, C.SALARY 월급, SG.grade 월급등급, S.DEPT_NAME 부서명
+FROM C_EMP C, sal_grade SG, S_DEPT S
+WHERE C.DEPT_ID = S.ID AND C.SALARY BETWEEN SG.LOSAL AND SG.HISAL AND S.DEPT_NAME IN ('개발부','영업부')
+ORDER BY sg.grade asc;
+
+2. sal_grade가 A  인원이 2명이상인 부서명 , 인원수 , 등급 
+     ( NON-EQUI JOIN /  EQUI JOIN 같이 사용)
+
+SELECT
+S.DEPT_NAME 부서명, COUNT(*) 인원수, SG.GRADE 등급
+FROM S_DEPT S, C_EMP C, SAL_GRADE SG
+WHERE C.DEPT_ID = S.ID AND C.SALARY BETWEEN SG.LOSAL AND SG.HISAL
+GROUP BY S.DEPT_NAME, SG.GRADE
+HAVING COUNT(*) >=2 AND SG.GRADE = 'A';
+
+
+//--> dqui JOIN / NON-EQUE JOIN :조건 만족 조회
+//==============================================//
+//==> 부서 배치 전  신입 사원 2명 RECORD 입력
+//==============================================//
+
+//==> FROEGIN KEY 제약조건 : 다른 TABLE PK or NULL 입력
+
+INSERT INTO c_emp VALUES(201,'신입1',1500,'3429-0100',null);
+INSERT INTO c_emp VALUES(202,'신입2',1500,'3429-0200',null);
+
+COMMIT;
+
+SELECT * FROM c_emp ; 
+C.NAME 이름 , S.DEPT_NAME 부서명
+FROM C_EMP C, S_DEPT S
+WHERE C.DEPT_ID =S.ID;
+
+
+//OUTER JOIN :: (+) 표시
+SELECT
+C.NAME NAME , S.DEPT_NAME 부서명
+FROM C_EMP C, S_DEPT S
+WHERE C.DEPT_ID =S.ID(+);

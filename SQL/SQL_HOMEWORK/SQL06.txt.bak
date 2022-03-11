@@ -1,0 +1,25 @@
+///////////////////////1번
+SELECT
+E.first_name, E.hire_date, E1.employee_id, E1.first_name
+FROM EMPLOYEES E, EMPLOYEES E1
+WHERE E1.employee_id(+) = E.manager_id AND E.hire_date BETWEEN '1980.01.01' AND '1989/12/31';
+
+
+SELECT
+employee_id, first_name
+FROM employees
+
+
+///////////////////////2번
+SELECT
+E.first_name, E.salary, D.department_name
+FROM DEPARTMENTS D, EMPLOYEES E
+WHERE E.department_id = D.department_id AND D.department_name = 'Sales' AND E.salary <(SELECT
+AVG(salary)
+FROM EMPLOYEES
+WHERE department_id =100);
+
+SELECT
+AVG(salary)
+FROM EMPLOYEES
+WHERE department_id =100;

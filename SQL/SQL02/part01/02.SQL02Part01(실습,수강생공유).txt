@@ -1,0 +1,38 @@
+//==============================================//
+//==================== 실   습  ====================//
+//==============================================//
+
+1. 직책 종류 조회
+SELECT
+DISTINCT DEPT_NAME 직책
+FROM EMP_TEST;
+2022-03-04
+
+2. 2001년 입사자 이름, 직책, 입사일 조회
+    (   1번째 QUERY는 LIKE사용
+	2번째 QUERY는 BETWEEN사용   )
+	
+SELECT
+NAME 이름, TITLE 직책, IN_DATE 입사일
+FROM EMP_TEST
+WHERE IN_DATE LIKE '01%';
+
+SELECT
+NAME 이름, TITLE 직책, IN_DATE 입사일
+FROM EMP_TEST
+WHERE IN_DATE BETWEEN '2001-01-01' AND '2001-12-31';
+
+3. 임금이 NULL인 사원의 모든 정보 입사일 오름차순 조회
+SELECT*FROM EMP_TEST
+WHERE SALARY IS NULL
+ORDER BY IN_DATE ASC;
+
+4. 관리부에서 급여가 6000이상 인 사람 이름/급여/부서 조회
+SELECT
+NAME 이름, SALARY 급여, DEPT_NAME 부서
+FROM EMP_TEST
+WHERE DEPT_NAME IN '관리부' AND SALARY >=6000;
+
+WHERE DEPT_NAME IN('관리부') AND SALARY ?=6000;
+
+WHERE DEPT_NAME ='관리부' AND SALARY>=6000;

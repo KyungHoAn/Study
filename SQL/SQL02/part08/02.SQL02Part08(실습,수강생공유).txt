@@ -1,0 +1,44 @@
+
+//==============================================//
+//================== 실   습 1  ====================//
+//==============================================//
+
+1.이순신과 같은 부서에 근무하는 직원  이름 ,부서명 조회
+SELECT
+C.NAME 이름, S.DEPT_NAME
+FROM C_EMP C, S_DEPT S
+WHERE C.DEPT_ID = S.ID AND DEPT_ID =(SELECT
+DEPT_ID
+FROM C_EMP
+WHERE NAME ='이순신');
+
+SELECT
+DEPT_ID, NAME
+FROM C_EMP
+WHERE NAME ='이순신';
+
+2. 전체평균금액 보다 낮은 급여를 받는직원  이름 , 부서명 ,급여 , 급여등급 조회
+SELECT
+C.NAME 이름, S.DEPT_NAME 부서명, C.SALARY 급여, SG.GRADE 급여등급
+FROM C_EMP C, S_DEPT S, SAL_GRADE SG
+WHERE C.DEPT_ID = S.ID AND C.SALARY BETWEEN SG.LOSAL AND SG.HISAL AND C.SALARY <(SELECT
+AVG(SALARY)
+FROM C_EMP);
+
+SELECT
+AVG(SALARY)
+FROM C_EMP;
+
+3. 홍길동과 월급등급이 같은 직원   이름, 부서명 , 월급 ,월급등급  조회
+SELECT
+C.NAME 이름, S.DEPT_NAME 부서명, C.SALARY 월급, SG.GRADE 월급등급
+FROM C_EMP C, S_DEPT S, SAL_GRADE SG
+WHERE C.DEPT_ID = S.ID AND C.SALARY BETWEEN SG.LOSAL AND SG.HISAL AND SG.GRADE = (SELECT
+SG.GRADE
+FROM C_EMP C, SAL_GRADE SG
+WHERE C.SALARY BETWEEN SG.LOSAL AND SG.HISAL AND C.NAME ='홍길동');
+
+SELECT
+SG.GRADE
+FROM C_EMP C, SAL_GRADE SG
+WHERE C.SALARY BETWEEN SG.LOSAL AND SG.HISAL AND C.NAME ='홍길동';

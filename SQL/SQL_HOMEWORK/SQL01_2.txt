@@ -1,0 +1,74 @@
+SELECT
+RANK() OVER(PARTITION BY ORDER BY SALARY DESC) RANKING,
+E.LAST_NAME, E.FIRST_NAME, E.SALARY
+FROM EMPLOYEES E
+GROUP BY E.LAST_NAME, E.FIRST_NAME, E.SALARY
+ORDER BY SALARY DESC;
+
+
+
+SELECT
+RANK() OVER(ORDER BY E.SALARY DESC) R,
+E.LAST_NAME, E.FIRST_NAME, E.SALARY
+FROM EMPLOYEES E
+WHERE R BETWEEN 6 AND 10
+GROUP BY E.LAST_NAME, E.FIRST_NAME, E.SALARY, R
+ORDER BY E.SALARY DESC;
+
+
+select
+vt.Ranking, e.LAST_NAME, e.FIRST_NAME, e.SALARY
+from employees e,(select
+                RANK() OVER (order by salary desc) RANKING, salary
+                from employees) vt
+where vt.Ranking Between 6 and 10
+      and e.salary = vt.salary
+group by e.last_name, e.first_name,e.salary,vt.Ranking
+order by vt.ranking;
+
+
+select
+vt.rankikng, e.last_name, e.first_name, e.salary
+from employees e, (select
+rank() over(order by salary desc) rankikng, salary, last_name, first_name
+from employees) vt
+where vt.salary = e.salary and 
+	  vt.first_name = e.first_name AND
+	  vt.last_name = e.last_name AND
+	  vt.rankikng BETWEEN 6 AND 10;
+
+
+
+//
+SELECT
+VT.RANKING, E.LAST_NAME, E.FIRST_NAME, E.SALARY
+FROM EMPLOYEES E, (SELECT
+RANK() OVER(ORDER BY SALARY DESC) RANKING, LAST_NAME
+FROM EMPLOYEES) VT
+WHERE E.LAST_NAME = VT.LAST_NAME AND VT.RANKING BETWEEN 6 AND 10
+GROUP BY VT.RANKING, E.LAST_NAME, E.FIRST_NAME, E.SALARY
+ORDER BY E.SALARY DESC;
+//
+
+select
+vt.ranking,e.last_name,e.first_name,e.salary
+from employees e, (select
+RANK() OVER(ORDER BY salary DESC) RANKING,salary
+from employees) vt
+where e.salary = vt.ranking AND vt.ranking between 6 and 10
+group by vt.ranking,e.last_name,e.first_name,e.salary
+ORDER BY vt.ranking DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

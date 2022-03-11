@@ -1,0 +1,90 @@
+////////////////////1번
+SELECT
+TO_CHAR(hire_date,'MM')||'월' 월, count(*) 직원수
+FROM EMPLOYEES
+GROUP BY TO_CHAR(hire_date,'MM')
+ORDER BY 월 ASC;
+
+
+
+///////////////////2번
+
+SELECT
+D.department_name, E.first_name, E.salary
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE D.department_id = E.department_id;
+
+
+SELECT
+MAX(SALARY)
+FROM EMPLOYEES
+GROUP BY DEPARTMENT_ID;
+
+
+SELECT
+D.department_name, E.first_name, E.salary
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE D.department_id = E.department_id AND 
+(E.department_id,E.salary) IN (SELECT
+			department_id, MAX(SALARY)
+			FROM EMPLOYEES
+			GROUP BY department_id);
+
+
+//////////////////////3번
+SELECT
+D.department_name, MAX(E.salary),MIN(E.salary), AVG(E.salary)
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.department_id = D.department_id
+GROUP BY D.department_name;
+
+
+SELECT
+D.department_name, MAX(E.salary),MIN(E.salary), AVG(E.salary)
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.department_id = D.department_id
+GROUP BY D.department_name
+HAVING AVG(E.salary) >(SELECT
+					AVG(SALARY)
+					FROM EMPLOYEES E, DEPARTMENTS D
+					WHERE E.department_id = D.department_id AND D.department_name IN ('IT')
+					GROUP BY D.department_name) 
+AND AVG(E.salary) <(SELECT
+				AVG(SALARY)
+				FROM EMPLOYEES E, DEPARTMENTS D
+				WHERE E.department_id = D.department_id AND D.department_name IN ('Sales')
+				GROUP BY D.department_name);
+
+//IT부서 평균
+SELECT
+AVG(SALARY)
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.department_id = D.department_id AND D.department_name IN ('IT')
+GROUP BY D.department_name;
+
+//Sales 부서 평균
+SELECT
+AVG(SALARY)
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.department_id = D.department_id AND D.department_name IN ('Sales')
+GROUP BY D.department_name;
+
+
+
+//////////////////////4번
+SELECT
+NVL(D.department_name,'<신생부서>') 부서명, COUNT(E.employee_id)
+FROM DEPARTMENTS D, EMPLOYEES E
+WHERE E.department_id = D.department_id(+)
+GROUP BY D.department_name
+HAVING COUNT(E.employee_id)<2
+ORDER BY NVL(D.department_name,'<신생부서>') DESC;
+
+
+/////////////////////5번
+SELECT
+D.department_name 부서명, E.hire_date 입사월, COUNT(E.employee_id) 직원수
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.department_id = D.department_id(+)
+GROUP BY D.department_name, E.hire_date
+HAVING count(E.employee_id) >4;

@@ -1,0 +1,54 @@
+SELECT
+E.EMPLOYEE_ID »ç¿ø¾ÆÀÌµð, D.DEPARTMENT_ID ºÎ¼­¾ÆÀÌµð, E.SALARY ¿¬ºÀ, AVG(SALARY) ºÎ¼­Æò±Õ¿¬ºÀ
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID  AND E.SALARY>(SELECT
+AVG(SALARY)
+FROM DEPARTMENTS D, EMPLOYEES E 
+WHERE D.DEPARTMENT_ID = E.DEPARTMENT_ID)
+GROUP BY E.EMPLOYEE_ID, D.DEPARTMENT_ID, E.SALARY;
+
+SELECT
+AVG(SALARY)
+FROM DEPARTMENTS D, EMPLOYEES E 
+WHERE D.DEPARTMENT_ID = E.DEPARTMENT_ID;
+
+
+select
+e.employee_id »ç¹ø, e.department_id ºÎ¼­¹øÈ£, e.salary ¿¬ºÀ, vt.avgsal ºÎ¼­Æò±Õ¿¬ºÀ 
+from employees e,
+(select
+department_id, round(avg(salary),0) avgsal
+from employees
+group by department_id) vt
+where (e.department_id = vt.department_id) and (e.salary > vt.avgsal)
+order by ºÎ¼­Æò±Õ¿¬ºÀ DESC;
+
+
+SELECT
+E.EMPLOYEE_ID, E.DEPARTMENT_ID, E.SALARY, VT.AVGS
+FROM EMPLOYEES E, (SELECT
+DEPARTMENT_ID, ROUND(AVG(SALARY),0) AVGS
+FROM EMPLOYEES
+GROUP BY DEPARTMENT_ID) VT
+WHERE E.DEPARTMENT_ID = VT.DEPARTMENT_ID AND (E.SALARY > VT.AVGS)
+ORDER BY VT.AVGS DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
