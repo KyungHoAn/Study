@@ -48,4 +48,11 @@ w/s 설치
   - web.cml에서 서블릿의 이름과 클래스, 그리고 URL 매핑을 설정, 이 정보를 서블릿 컨테이너가 사용
 
 
-##servlet은 반드시 browser에서 실행 (client)가 실행
+## servlet은 반드시 browser에서 실행 (client)가 실행
+
+# 표준화된 폴더구조
+  * 서블릿은 서버가 요청을 받고 자동으로 실행하는 웹 애플리케이션 파일
+  - Web app
+  - Servlet Context (웹 어플리케이션)
+  - Servlet directory
+    -  
