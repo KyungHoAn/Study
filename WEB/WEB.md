@@ -54,5 +54,6 @@ w/s 설치
   * 서블릿은 서버가 요청을 받고 자동으로 실행하는 웹 애플리케이션 파일
   - Web app
   - Servlet Context (웹 어플리케이션)
+    -  
   - Servlet directory
     -  
