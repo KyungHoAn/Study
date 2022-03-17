@@ -92,7 +92,7 @@ w/s 설치
   - URI : Context root에 종속적
     - Content directory의 경로, 해당 경로에 메타 정보와 웹 정보를 관리하는 것
    ![image](https://github.com/KyungHoAn/Study/blob/master/WEB/WEB_img/Get%26Post.png)
-   
+* war 압축 방법
    - cmd-> edu 이동 -> jar 검색 -> jar -> cuf edu01.war . -> edu01.war확인 후 tomcat on -> ㄷ여01qhrtk -> 아파치 webapps에 저장
    - JavaEE 개발환경 구축 
      - static web Project : html 개발
