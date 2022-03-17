@@ -138,3 +138,35 @@ Enumeration<String> en = req.getParameterName(0;
   
 # CRUD
   *create(레코드) / Read(select) / U(update, select도 해야함) / D (delete, select도 해야함)
+</br>
+
+# Cookie/session
+- 서블릿 : 서버에서 도는 app
+- 다이나믹 - Cervlet Container
+- 상태유지 (상태정보 유지기술) 
+  - Client(클라이언트)
+    - Cookie : 웹 브라우저에 저장되는 것
+  - Server(서버)
+    - 서버에 저장되는 것
+    - ServletContext
+    - httpSession
+    - HttpServeltRequest
+  - Cookie => javax.servlet.http / 생성자 1개(Cookie)
+    - Cookie c = new Cookie(N,V) **Cookie는 Clinet에 저장 
+* tomcat_home에 있는 xml은 모든 xml에 적용 -> session 확인 (시간설정)
+  * session 만드는 방법 = getSession(true)
+  *  
+
+# Code
+* import javax.servlet.http.Cookie
+  * setMaxAge(60*60) //cookie 유효기간(초) setMaxAge(-1) / setMaxAge(0)
+    - 양의 값은 cookie가 몇 초 후에 만료임을 나타낸다. 이 값은 쿠키의 현재 사용 기간이 아니라 쿠기가 만료되는 최대 사용기간
+    - 음수값은 쿠키가 영구적으로 저장되지 않고 웹 브라우저가 종료될때 삭제된다.
+    - 값이 0이면 쿠키 삭제
+* HttpSession session = req.getSession(true)
+  - 깨끗한 상태에서 들어가면 Session을 만들어줌 true 
+* setAttribute / getAttribute
+  * setAttribute(key,value)를 통해 html태그에 해당key로 세팅해서 value값을 넣어준다
+  * getAttribute(key) key에 해당하는 값을 가져온다
+  *  
+  
