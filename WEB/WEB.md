@@ -65,6 +65,8 @@ w/s 설치
   - Web app
   - Servlet Context (웹 어플리케이션)
     -  서블릿 컨테이너와 통신하기 위해서 사용되는 메소드를 지원하는 인터페이스
+  - Context Path : 프로젝트 명을 의미하며 url의 호스트 프트명 다음에 나온다
+  - Context root : Content directory의 경로, 해당 경로에 메타 정보를 관리하는 Meta-INF와 WEB-INF파일이 자동 생성되며 JSP파일은 여기 하위에 저장되어야 경로찾을 수 있다.
   - Servlet directory
   * Servlet 동작 방식
     - 서블릿 컨테이너 등록 => 서블릿 컨테이너에 의해 init()생성 , service()호출, destory() 소멸로 이루어진다.
