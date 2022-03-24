@@ -72,5 +72,5 @@ dispatcher.forward(request, response);
   * GetUserList
   * UpdateaUser
 
-## MVC - View부분
+## MVC - View단
 - .jsp
