@@ -58,12 +58,13 @@ ${pageContext.session.id}
 
 __*getAttribute = scope 로 변환__
 __*getSession = session으로 변환__ 
-
 <br/>
+
 ### code
 ```
 <%@ page isELIgnored="false" %>
 ```
+
 - 위 값을 test해보면 isELIgnored값의 default값은 false
 ```
 1. page ObjectScope값 접근
