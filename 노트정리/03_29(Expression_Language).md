@@ -45,11 +45,15 @@ Servletcontext <=  application  =>  applicationScope
 위에 코드를 EL로 변환
 ${sessionScope.a}
 ```
+
 ```
 <%= pagecontext.getSession().getId()%>
 ${pageContext.session.id}
 ```
 
+```
+
+```
 <br/>
 
 __*getAttribute = scope 로 변환__
@@ -57,3 +61,59 @@ __*getSession = session으로 변환__
 
 <br/>
 ### code
+```
+<%@ page isELIgnored="false" %>
+```
+- 위 값을 test해보면 isELIgnored값의 default값은 false
+```
+1. page ObjectScope값 접근
+${pageScope.abc} = ${pagescope["abc"]}
+```
+- 위 두개의 접근방식은 동일하다.
+```
+Object Scope의 영역을 지정하지 않고 EL을 사용 abc접근시
+${abc}
+```
+- Scope는 생략가능
+- 가장 작은 scope를 찾아서 표현
+  0. page
+  1. request
+  2. session
+  3. application
+- error / Null Exception에 관대하다
+
+### EL의 특징
+- Scriptlet Tag 이용 화면 구성
+```
+<%
+  out.println("<h3> 1.Scriplet Tag이용 session 저장 Bean(Data)화면 구성</h3>");
+  client client = (Client)session.getAttribute("client");
+  
+  out.println("이름:"+client.getName()+"<br/>");
+  String[] info = client.getInfo();
+  for(int i=0; i<info.length; i++){
+    out.println("info배열의 index["+i+]: "+info[i]+"<br/>");
+  }
+%>
+```
+- EL이용 화면 구성
+```
+name: ${sessionScope.client.name}
+addr: ${client.addr}
+age: ${cient.age}
+
+info 배열은 empty: $(empty client.info}<br/>
+
+info배열의 index 0 value: ${sessionScope.client.info[0]}<br/>
+info배열의 index 1 value: ${client.info[1]}<br/>
+```
+- EL특징 : OjbectScope, Bean, Collection 접근용이
+
+```
+num1+num2: ${num1+pageScope, num2}
+```
+- String + String : null Stirng은 0으로 ㅇㄴ식
+### 화면 출력 방식
+- ${}
+- <%= %>
+- <c:out~>
