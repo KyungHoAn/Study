@@ -102,9 +102,29 @@
   </table>
 
 <hr/>
+
 ## Spring Framework 사용
  - springFramework.org 이동하여 project->spring Framework LEARN
  - 앞에 숫자가 바뀌면 메이저 업그레이드 뒤에 숫자가 바뀌면 마이너 업그레이드
  - spring download후 spring_home 설정
  - project 생성
- - 
+
+1. 새로운 자바 프로젝트 생성 -> Source Folder 클릭 <br/>
+__*src/main/java => bean저장__<br/>
+__*src/test/java => application저장__<br/>
+__*src/main/resources => metadata저장__ : 소프트웨어를 돌리는데 부수적인것을 저장한다.<br/>
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/1.png" width="50%" height="50%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/2.png">
+2. Source Folder 생성 (src/main/java) (src/main/resources) (src/test/java)
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/3.png" width="50%" height="50%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/4.png" width="50%" height="50%">
+3. Spring Framework도 추가적으로 jar를 넣어주어야 한다. .jar를 넣기 위해서 Preferences -> User Libraies -> new -> spring_home루트 저장
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/5.png" width="60%" height="60%">
+4. spring_framework-5.2.5 libs 에서 doc와 sources 빼고 넣어준다.
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/6.png" width="60%" height="60%">
+6. Add Library하여 Library추가
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/7.png" width="60%" height="60%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/8.png" width="60%" height="60%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/9.png" width="60%" height="60%">
+
+
