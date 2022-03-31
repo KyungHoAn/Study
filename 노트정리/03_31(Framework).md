@@ -141,4 +141,4 @@ java.lang.String s = new java.lang.String();
 ```
 - Sring Framework의 기본 Base는 BeanContainer이다.
 - spring Framework에서 Bean을 하는 이유는 new에 대한 커플링관계를 떨어뜨리기 위해서 사용한다. (돈/시간 절약)
-- 
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/10.png" width="80%" height="80%">
