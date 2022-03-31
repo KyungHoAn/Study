@@ -18,13 +18,85 @@
 
 ### eclipse Git 사용법
 1. help에서 Eclipse Marketplaec 클릭
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/1.png" width="30%" height="30%">  
 2. git 검색 후 EGit - Git Integration for Eclipse 인스톨럴 되어있는지 확인
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/2.png" width="30%" height="30%">
 3. open Perpective 에서 Git 클릭 후 Git Repositories 생겼는지 확인
+<table>
+  <tr>
+<td><img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/3.png" width="40%" height="40%"> <img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/4.png" width="50%" height="50%">
+    </td>
+  </tr>
+</table>
 4. (test file)생성 New Dynamic web Project 생성
-5. (Project Name)  z.studyGit 생성
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/5.png" width="80%" height="80%">
+5. (Project Name)  z.studyGit 생성 => create 누루고 프로젝트 이름 수정후 finish
+<table>
+  <tr>
+    <td>
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/6.png" width="40%" height="40%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/7.png" width="40%" height="40%">
+    </td>
+  </tr>
+</table>
 6. 만든 project 오른쪽 클릭 -> Team -> Share Project
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/8.png" width="50%" height="50%">
 7. Share Project -> Create 클릭 -> master 브랜치 생성
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/9.png" width="70%" height="70%">
 8. javaEE클릭후 project 이름 옆에 master branch 생성되었는지 확인
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/10.png" width="30%" height="30%">
 9. Git Repositories 에서 Working Tree 밑 z.studyGit 생성 확인
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/11.png" width="40%" height="40%">
 10. 탐색기 workspace에 git project 생성 안되있는거 확인 -> 탐색기 사용자 -> git -> 01First(Create a Git Repository 에서 만든 이름) -> z.sudyGit파일 확인
-11. 
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/12.png" width="30%" height="30%">
+11. project -> Team -> show in History (그동한 작업했던 경로들을 보여준다.)
+<table>
+  <tr>
+    <td>
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/13.png" width="30%" height="30%">
+ <img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/14.png" width="60%" height="90%">
+    </td>
+  </tr>
+</table>  
+12. commit하기전 __*필수사항(확인) Preferences -> Version Control(Team)-> Git -> Committing 에서 User Staging~~~ 체크표시 해제
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/15.png" width="60%" height="60%">
+13. Prodject => Team => commit
+<table>
+  <tr>
+    <td>
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/16.png" width="40%" height="40%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/17.png" width="40%" height="40%">
+    </td>
+  </tr>
+  </table>
+14. Git Repositories 에서 커밋 메시지 확인
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/18.png" width="60%" height="60%">
+15. 새로운 branch 생성
+<table>
+  <tr>
+    <td>
+<img src=" https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/19.png" width="50%" height="50%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/20.png" width="40%" height="40%">
+    </td>
+  </tr>
+</table>
+16. new/dev branch로 변경
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/23.png" width="40%" height="40%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/24.png" width="50%" height="50%">
+    </td>
+  </tr>
+  </table>
+17. master branch에서는 최신버전 관리만 진행하고 작업은 다른 브랜치에서 진행
+  - branch 병합시 충돌오류가 표시되는데 충돌오류수정 후 수정했다는 것을 알려주기 위해서 Add in index 클릭
+<table>
+  <tr>
+    <td>
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/24.png" width="30%" height="30%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/28.png" width="60%" height="60%">
+    </td>
+  </tr>
+  </table>
+  
