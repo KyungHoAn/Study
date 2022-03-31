@@ -15,8 +15,9 @@
 - conflict => Mearge시 충돌
 - repostory => 저장소
 - Commit => branch 작업 저장
+<hr/>
 
-### eclipse Git 사용법
+## eclipse Git 사용법
 1. help에서 Eclipse Marketplaec 클릭
 <img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/git/1.png" width="30%" height="30%">  
 2. git 검색 후 EGit - Git Integration for Eclipse 인스톨럴 되어있는지 확인
@@ -99,4 +100,11 @@
     </td>
   </tr>
   </table>
-  
+
+<hr/>
+## Spring Framework 사용
+ - springFramework.org 이동하여 project->spring Framework LEARN
+ - 앞에 숫자가 바뀌면 메이저 업그레이드 뒤에 숫자가 바뀌면 마이너 업그레이드
+ - spring download후 spring_home 설정
+ - project 생성
+ - 
