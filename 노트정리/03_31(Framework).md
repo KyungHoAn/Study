@@ -104,6 +104,7 @@
 <hr/>
 
 ## Spring Framework 사용
+ - String Framework는 여러개의 모듈들이 합쳐진것을 말한다.
  - springFramework.org 이동하여 project->spring Framework LEARN
  - 앞에 숫자가 바뀌면 메이저 업그레이드 뒤에 숫자가 바뀌면 마이너 업그레이드
  - spring download후 spring_home 설정
@@ -127,4 +128,17 @@ __*src/main/resources => metadata저장__ : 소프트웨어를 돌리는데 부�
 <img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/8.png" width="60%" height="60%">
 <img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/spring/9.png" width="60%" height="60%">
 
+### Code
+```
 
+```
+#### 용어
+* FQCN(Fully Qualified Class Name)
+  - FQCN은 클래스가 속한 패기지명을 모두 포함한 이름
+ex)
+```
+java.lang.String s = new java.lang.String();
+```
+- Sring Framework의 기본 Base는 BeanContainer이다.
+- spring Framework에서 Bean을 하는 이유는 new에 대한 커플링관계를 떨어뜨리기 위해서 사용한다. (돈/시간 절약)
+- 
