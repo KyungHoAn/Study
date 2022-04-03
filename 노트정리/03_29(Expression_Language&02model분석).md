@@ -118,3 +118,6 @@ num1+num2: ${num1+pageScope, num2}
 - ${}
 - <%= %>
 - <c:out~>
+
+## 02model2MVCShop(Refactor & Page Navigation)
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/29/29-1.png" width="60%" height="60%">
