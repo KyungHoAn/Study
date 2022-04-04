@@ -105,3 +105,10 @@ public boolean isSingleton(){
 </encironment>
 ```
 - dataSource를 POOLED로 변경하고 설정 추가
+
+### MyBatis 설정방법
+- myBatis-3.4.6 진행
+- DB( prot:5000)홈페이지 이동-> system/system -> 관리-> DB사용자 -> myBatis/myBatis/myBatis 이름/아이디/비번 생성
+- MyBatis project생성
+- jdbc-driver ojdbc 6 잡아줌
+- mybatis classpath 잡아줌
