@@ -58,7 +58,7 @@ public class ExampleClass {
 - Singleton 사용이유
   - 객체 생성으로 재사용이 가능하기 때문에 메모리 낭비 x
   - 싱글톤으로 생성된 객체는 무조건 한번 생성으로 전역성을 띄기 때문에 다른 객체와 공유가 용이
-  
+
 ### UserFactoryBean
 ```
 @Override
@@ -71,7 +71,8 @@ public boolean isSingleton(){
 - return 값을 true로 할 시 하나씩 Singleton 형식으로 만든다. 
 -  return flase로 선언시 prototype형식으로 getBean할때마다 만들어준다(그때그때마다 만들어준다)
 -  전체를 주석처리하면 default값인 true 주어 error가 나지 않는다.
-
+* singleTon으로 할 시
+* prototype으로 할 시
 ## mybatis
 - 객체 지향 언어인 자바의 관계형 데이터베이스 프로그래밍을 좀 더 쉽게 할 수 있게 도와 주는 개발 프레임 워크로서 JDBC를 통해 데이터베이스에 엑세스하는 작업을 캡슐화하고 일반 SQL 쿼리, 저장 프로 시저 및 고급 매핑을 지원하며 모든 JDBC 코드 및 매개 변수의 중복작업을 제거 합니다. Mybatis에서는 프로그램에 있는 SQL쿼리들을 한 구성파일에 구성하여 프로그램 코드와 SQL을 분리할 수 있는 장점
 - 특징
