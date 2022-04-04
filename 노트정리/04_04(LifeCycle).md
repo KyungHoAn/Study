@@ -72,7 +72,10 @@ public boolean isSingleton(){
 -  return flase로 선언시 prototype형식으로 getBean할때마다 만들어준다(그때그때마다 만들어준다)
 -  전체를 주석처리하면 default값인 true 주어 error가 나지 않는다.
 * singleTon으로 할 시
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/1.png" width="50%" height="50%">
 * prototype으로 할 시
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/1.png" width="50%" height="50%"><br/>
+
 ## mybatis
 - 객체 지향 언어인 자바의 관계형 데이터베이스 프로그래밍을 좀 더 쉽게 할 수 있게 도와 주는 개발 프레임 워크로서 JDBC를 통해 데이터베이스에 엑세스하는 작업을 캡슐화하고 일반 SQL 쿼리, 저장 프로 시저 및 고급 매핑을 지원하며 모든 JDBC 코드 및 매개 변수의 중복작업을 제거 합니다. Mybatis에서는 프로그램에 있는 SQL쿼리들을 한 구성파일에 구성하여 프로그램 코드와 SQL을 분리할 수 있는 장점
 - 특징
