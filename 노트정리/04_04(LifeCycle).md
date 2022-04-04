@@ -87,6 +87,7 @@ public boolean isSingleton(){
 - 커넥션 풀이란 최초 사용자의 요청이 있을 떼 DB에 연결하여 명령을 실행, 명령이 종료되어도 연결을 종료하지 않고 pool에 저장하여 요청이 올때마다 pool에서 커넥션을 꺼내 재사용하는 것
 - JDBC DB연결 순서 (Connection -> Perparement -> ResultSet) 이것을 myBatis에서 .xml에 기술
 ```
+* connection pool진행 과정
 .xml
 <environments default="development">
 	<environment id="development">
@@ -99,3 +100,4 @@ public boolean isSingleton(){
 	</dataSource>
 </encironment>
 ```
+- dataSource를 POOLED로 변경하고 설정 추가
