@@ -52,7 +52,7 @@ interface Dice{
 #### BeanFactory 와 ApplicationContext
 ```
 BeanFactory factory =
-				new XmlBeanFactory( new FileSystemResource("./src/main/resources/config/userservice01.xml") );
+	new XmlBeanFactory( new FileSystemResource("./src/main/resources/config/userservice01.xml") );
 ```
 ```
 ApplicationContext factory = new ClassPathXmlApplicationContext("/config/userservice01.xml");
