@@ -111,4 +111,9 @@ public boolean isSingleton(){
 - DB( prot:5000)홈페이지 이동-> system/system -> 관리-> DB사용자 -> myBatis/myBatis/myBatis 이름/아이디/비번 생성
 - MyBatis project생성
 - jdbc-driver ojdbc 6 잡아줌
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/4_4/3.png" width="50%" height="50%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/4_4/5.png" width="50%" height="50%">
+
 - mybatis classpath 잡아줌
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/4_4/6.png" width="50%" height="50%">
+<img src="https://github.com/KyungHoAn/Study/blob/master/%EB%85%B8%ED%8A%B8%EC%A0%95%EB%A6%AC/%EC%BA%A1%EC%B3%90/4_4/7.png" width="50%" height="50%">
