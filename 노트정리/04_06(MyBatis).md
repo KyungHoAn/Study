@@ -70,3 +70,20 @@ public int addUser(user user) throw Excpetion
   * myBatis-spring 1.3.1 classpath
   + common dbcp 1.4 & common pool 1.6 classpath
   
+### Annotation
+- Spring xml 만을 독립적으로 사용할 경우 때때로 방대하고 복잡한 속성 파일들로 인해 시스템 개발 및 유지 보수의 지연 가능
+- 이러한 문제점을 해결하기 위해 spring에서는 별도 XML정의 없이도 사용가능한 Annotation 지원에 주력
+- 구성
+  @Transactional, @Service, @Controller, @Repository, @inject등
+- 일반적인 정의
+  -@Component 
+- 레이어별로 구분하여 상세 정의
+  - @Service
+    - Business Layer를 구성하는 서비스 클래스 대상
+  - @Controller
+    - Presentation Layer를 구성하는 Controller클래스 대상
+  - @Repository
+    - Data Access Layer를 구성하는 클래스 대상
+  - @Inject
+  - @Named
+  
