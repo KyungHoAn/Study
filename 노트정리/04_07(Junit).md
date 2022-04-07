@@ -58,3 +58,16 @@ public void testAddUser() throws Exception{}
 1. Junit.org이동
 2. download할 버전 찾고 download
 3. .jar build path잡아줌
+
+## 04.Model2MVCShope(Business Logic,MyBatis Spring) 분석
+* userServiceTest
+```
+Assert.assertEquals("~",~);
+
+Assert.assertFalse(x)
+Assert.assertTrue(x)
+```
+- assertEquals(x,y) : 객체 x와 y의 일치함을 확인, x와 y가 같으면 테스트 통과
+- Assert.assertFalse : x가 false인지 확인
+- Assert.assertTrue : x가 true인지 확인
+- 
