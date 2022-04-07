@@ -70,4 +70,8 @@ Assert.assertTrue(x)
 - assertEquals(x,y) : 객체 x와 y의 일치함을 확인, x와 y가 같으면 테스트 통과
 - Assert.assertFalse : x가 false인지 확인
 - Assert.assertTrue : x가 true인지 확인
-- 
+
+* @Repository는 DB에 접근하는 코드를 모아둠
+* Service는 DB에 직접적으로 접근하는것을 Repository에 맡겨 비즈니스 로직에 집중
+* 비즈니스 로직은 데이터베이스와 유제 인터페이스간의 정보 교환을 다루는 알고리즘
+
