@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+	<form method='Post' action='Homework01'>
+ 	
+	<table border ="1" width="80%" height="100">
+		<tr>
+			<td align=left> 개인정보</td>
+			<td align=right colspan="3"><input type="button" value="?">
+			도움말</td>
+		</tr>
+		<tr>
+			<td>*이름(한글실명)</td>
+			<td colspan="3"><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td>*성별</td>
+			<td colspan="3"><input type="radio" name="sex" value="male" ondblclick="this.checked=false">남
+			<input type="radio" name="sex" value="female" ondblclick="this.checked=false">여</td>
+		</tr>
+		<tr>
+			<td>*생년월일</td>
+			<td colspan="3"><input type="year" name = "year">년
+				<select id="month"><option>선택</option>
+				<option value="1">1</option>
+				<option value="2">2</option><option value="3">3</option>
+				<option value="4">4</option><option value="5">5</option>
+				<option value="6">6</option><option value="7">7</option>
+				<option value="8">8</option><option value="9">9</option>
+				<option value="10">10</option><option value="11">12</option>
+				<option value="12">12</option>
+				</select>월
+				<select id="day"><option>선택</option>
+				
+				</select>일
+
+				<input type="radio" name="brith" value="양력" ondblclick="this.checked=false">양력
+				<input type="radio" name="brith" value="음력" ondblclick="this.checked=false">음력
+				<input type="radio" name="윤" value="윤달" ondblclick="this.checked=false">(윤달)
+			</td>			
+		</tr>
+		<tr>
+			<td>*최종학력</td>
+			<td colspan="3"><select id="school">
+			<option>선택하세요</option><option value="대학교">대학교</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>*직업</td>
+			<td><select id="job">
+				<option>선택하세요</option><option value="job" name='job'>개발자</option>
+			</select>
+			<td>*소속</td>
+			<td><input type="text" name="소속"></td>
+		</tr>
+		<tr>
+			<td>*결혼여부</td>
+			<td>
+				<input type="radio" name="marry" value="미혼" ondblclick="this.checked=false">미혼
+				<input type="radio" name="marry" value="기혼" ondblclick="this.checked=false">기혼
+			</td>
+			<td>자녀수</td>
+			<td><select id="kid"><option>선택</option></select>명</td>
+		</tr>
+		<tr>
+			<td rowspan="3" name="sum">*연락처</td>
+			<td colspan="3">전화번호<input type="text" name="homephone" style="width:50px">-<input type="text" name="phone" style="width:50px">-<input type="text" name="phone" style="width:50px">
+
+				<input type="radio" name="home" value="집">집
+				<input type="radio" name="home" value="직장">직장
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">휴대폰<input type="text" name="phone" style="width:50px">-<input type="text" name="phone" style="width:50px">-<input type="text" name="phone" style="width:50px">
+			
+				이동통신사&nbsp;
+				<input type="radio" name="call">SKT
+				<input type="radio" name="call">KT
+				<input type="radio" name="call">LG
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<p>전화번호나 휴대폰번호 2가지 중 하나는 반드시 입력하셔야 합니다.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>*거주지 주소</td>
+			<td colspan="3">
+			<input type='button' value='해외'>
+			<input type='button' value='국내'>
+			<input type="text">
+		</tr>
+	</table>		
+		<input type='submit' value='회원가입'/>
+		<input type='reset' value='취소' />
+	</form>
+ </BODY>
+</HTML>
+<!-- 
+CREATE TABLE homework01(
+	name 	VARCHAR(20),
+	sex 	VARCHAR(20),
+	birth 	VARCHAR(20),
+	last_school	 VARCHAR(20),
+	job 	VARCHAR(20),
+	marry 	VARCHAR(20),
+	phone 	VARCHAR(20),
+	address 	VARCHAR(20)
+);
+
+
+INSERT
+INTO homework01(name, sex, birth, job, phone)
+VALUES('홍길동','남','1998','개발자','12345');
+
+SELECT
+name
+FROM homework01; 
+ -->
