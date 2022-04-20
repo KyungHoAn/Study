@@ -82,4 +82,55 @@
 
 ### 02what_jQuery.html
 1. javascript 이용 : onload시 호출되는 function 선언
-2. 
+2. onload : DOM element의 load또는 image 또는 외부 모든 resource 들이 load완료 시점
+```
+	 window.onload = function(){
+		 alert("element 파싱, load 완료 시점 alert 창 open \n\n wondow.onload사용")
+	 }
+	 
+	 //2.1 jQuery 사용법
+	 //:1. 과 동일 (차이점: DOM element 가 load된 시점에 실행)
+	 //:1보다 2.보다 2.1이 먼저 실행된
+	 //==> ready(CallBack function)
+	 $(document).ready(function(){
+		 alert("element 파싱, load완료시점 alert 창 open \n\n jQuery $(document).ready()사용")
+	 });
+	 
+	 //2.2 jQuery 사용법
+	 //:2.1 과 동일(notation만 틀리다)
+	 // : 1보다 2.1 2.2 먼저 실행됨)
+	 
+	 $(function(){
+		 alert("element 파싱(load) 완료시점 alert창 open \n\n jQuery $() 사용")
+	 });
+```
+- $(document).ready(function(){}과 $(function(){} 은 같은 의미 후자를 더 선호
+- 같은 의미인 것
+```
+$(function(){
+jQuery(fucntion(){}
+window.jQuery(function(){}
+window.$(function(){}
+```
+### 10selector_tag_id_class.html
+```
+// html element 이름으로 접근
+span{}
+// class attribute 로 접근
+.abc{}
+// id attribute로 접근
+#uniquIdP{}
+```
+- onlyCSS02.html 참조
+- selector (선택자) : dom을 다루기 위해 element Object GET
+	- tag 선택자 : $("elementName")
+	- id 선택자 : $("#id")
+	- class 선택자 : $(".className") 
+
+```
+var divElem = $("div");
+divElem.css('color','yellow');
+=======> 같은 의미
+$("div").css('color','black');
+```
+
