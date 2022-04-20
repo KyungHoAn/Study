@@ -134,3 +134,16 @@ divElem.css('color','yellow');
 $("div").css('color','black');
 ```
 
+### 12selector_css().html
+- body * => body 안에 있는 모든 tag
+- body > * => body 바로 밑에 있는 1촌들
+- ~~~~~
+
+### 13selector_attribute_css().html
+- $($('form[name]')[0]).css('color','red');
+- => js 오류시 $로 감싼다?
+	- element여서 jQuery객체로 만든 것
+	- jQuery객체를 사용한 것이 아닌 element를 사용해서 error가 난것 
+
+### 14selector_form_filter_val()_click().html
+### 15selector_form_filter_val()_click().html
