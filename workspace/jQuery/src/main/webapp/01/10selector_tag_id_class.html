@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!-- 
+	■ css(Cascading Style Sheets) 작성 
+	■ static contents + style(Design) 뒤섞여 있다
+	■ html 과 style 를 분리하자
+ -->
+<html>
+
+<head>
+	<meta charset="EUC-KR">
+	
+	<style type="text/css">
+		span{
+			background-color: yellow ; 
+			font-size: 10pt;
+		}
+		
+		.abc{
+			background-color: green ; 
+			font-size: 20pt;
+		}
+		
+		#uniqueld{
+			background-color: red;
+			font-size: 30pt;
+		}
+	</style>
+	
+	<script src="../javascript/jquery-2.1.4.js" text ="javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			//==> 아래의 각각를 주석처리하며 실행 의미 이해
+			//1. Tag Selector : Element name 이용 선택 Element Object GET
+			//var divElem = $("div");
+			//divElem.css('color','yellow');
+			//$("div").css('color','black');
+			
+			//2.id Selector : Unique 한 id 이용 Element Object GET
+			//var obj= $("#uniqueId");
+			//obj.css('color','green');
+			$("#uniqueld").css('color','green');
+			
+			//2.class Selector : class attribute name 이용 Element Object GET
+			var obj=$(".abc");
+			//obj.css('color','yellow');
+			$(".abc").css('color','yellow');
+		});
+		
+	</script>
+</head>
+
+<body>
+	<!--	
+		<div>  / <span>
+		: Block-Level Element 중 Div Element(DIVision marker)
+		: 블록처리하여 여러조각처리 디자인,관리 가능하게함.
+		: Div는 줄바꿈을 하고 Span은 줄바꿈이 없습니다. 
+	-->
+	<span> Framework이란?</span>
+	<span class="abc"> javascript Framework</span>
+	<div id="uniqueld">jQuery Framework</div>		
+
+</body>
+	
+</html>
