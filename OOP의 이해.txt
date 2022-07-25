@@ -1,3 +1,4 @@
+# 자바 정리
 OOP => object oriented Programming(객체 지향 프로그래밍)
 OOP는 객체 지향 프로그램으로 객체를 이용하여 프로그래밍을 동작하는 방식이다.
 => RealWorld를 System.화 하는 방법론(현실세계를 개체라는 것으로 프로그램상으로 반영하는 방식)
