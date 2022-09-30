@@ -36,7 +36,7 @@ w/s 설치
 3. C 밑에 Apache Home 설정
 
 ## Java Web 개발환경 구축
-![image](https://github.com/akh981216/Study/blob/master/WEB/WEB_img/java_web%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.png)
+![image](https://github.com/KyungHoAn/Study/blob/master/WEB/WEB_img/java_web%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.png)
 * spev을 알고 있으면 어떤 진영에서도 다 사용할 수 있다. (다형성)
 * Servlet Container : 서블릿들의 생성, 실행, 파괴를 담당한다. / 서블릿들을 위한 상자
   * 서버에 만들어진 서블릿이 스스로 작동하는 것이 아닌 서블릿을 관리해주는 것이 필요한다. 이 역할이 서블릿 컨테이너이다. 
