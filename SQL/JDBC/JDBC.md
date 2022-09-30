@@ -9,7 +9,7 @@
  </br>
  </br>
 
-![image](https://github.com/akh981216/Study/blob/master/SQL/JDBC/JDBC_img/java_web%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.png)
+![image](https://github.com/KyungHoAn/Study/blob/master/SQL/JDBC/JDBC_img/java_web%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95.png)
 
 * JDBC 절차&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL 절차
   1. Connection&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Login (id, pwd, ip)
